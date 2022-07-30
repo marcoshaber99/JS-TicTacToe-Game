@@ -1,12 +1,12 @@
 :root {
-  --left-text: #4c6986;
+  --left-text: #dddddd;
   --header-text: #9a9a9a;
-  --board-bg-color: white;
-  --border-of-tiles: rgba(137, 163, 189, 0.5);
+  --board-bg-color: #222831;
+  --border-of-tiles: #f05454;
   --border-bottom-of-header: #eee;
-  --board-tile-hover-color: #eee;
-  --x-player-active:#42BED7;
-  --o-player-active:#D7BAFB;
+  --board-tile-hover-color: #30475e;
+  --x-player-active: #00d5ff;
+  --o-player-active: #ffa201;
 }
 * {
   box-sizing: border-box;
@@ -16,15 +16,22 @@
 body {
   font-family: "Merriweather", sans-serif;
   color: var(--left-text);
+  background: #222831;
 }
-
+.name-title {
+  font-size: smaller;
+}
+.name-title {
+  max-width: 500px;
+}
 .wrapper {
   max-width: 1440px;
   height: 800px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
+  padding: 40px;
 }
 
 h1 {
@@ -46,7 +53,7 @@ h1 {
 }
 .restart:hover {
   background: var(--left-text);
-  color: white;
+  color: #222831;
 }
 
 .header {
@@ -61,14 +68,14 @@ h1 {
   border-bottom: 5px solid var(--border-bottom-of-header);
   padding-bottom: 8px;
 }
-.player-x.active { 
-    color: var(--x-player-active) ;
-    border-color: var(--x-player-active);
+.player-x.active {
+  color: var(--x-player-active);
+  border-color: var(--x-player-active);
 }
 
-.player-o.active { 
-    color: var(--o-player-active) ;
-    border-color: var(--o-player-active);
+.player-o.active {
+  color: var(--o-player-active);
+  border-color: var(--o-player-active);
 }
 
 .game {
@@ -105,4 +112,29 @@ h1 {
 
 .board-tile:hover {
   background: var(--board-tile-hover-color);
+}
+
+.tile-x {
+  color: var(--x-player-active);
+}
+
+.tile-o {
+  color: var(--o-player-active);
+}
+
+.tile-winner {
+  background-color: rgba(77, 255, 0, 0.097);
+}
+.tile-winner span {
+  color: rgb(153, 255, 0);
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-bottom: 50px;
+  }
 }
