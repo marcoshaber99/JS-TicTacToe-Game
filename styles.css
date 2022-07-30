@@ -1,0 +1,97 @@
+:root {
+  --left-text: #4c6986;
+  --header-text: #9a9a9a;
+  --board-bg-color: white;
+  --border-of-tiles: rgba(137, 163, 189, 0.5);
+  --border-bottom-of-header: #eee;
+  --board-tile-hover-color: #eee;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+  color: var(--left-text);
+}
+
+.wrapper {
+  max-width: 1440px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+.restart {
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid var(--left-text);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.restart:hover {
+  background: var(--left-text);
+  color: white;
+}
+
+.header {
+  display: flex;
+  color: var(--header-text);
+  font-size: 24px;
+}
+
+.header > .player-x,
+.header > .player-o {
+  flex: 1;
+  border-bottom: 5px solid var(--border-bottom-of-header);
+  padding-bottom: 8px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+
+.board {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 0px;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.board-tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  background: var(--board-bg-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.board-tile:not(:nth-child(3n)) {
+  border-right: 3px solid var(--border-of-tiles);
+}
+
+.board-tile:not(:nth-last-child(-n + 3)) {
+  border-bottom: 3px solid var(--border-of-tiles);
+}
+
+.board-tile:hover {
+  background: var(--board-tile-hover-color);
+}
