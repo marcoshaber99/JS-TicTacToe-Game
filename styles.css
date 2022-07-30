@@ -5,6 +5,8 @@
   --border-of-tiles: rgba(137, 163, 189, 0.5);
   --border-bottom-of-header: #eee;
   --board-tile-hover-color: #eee;
+  --x-player-active:#42BED7;
+  --o-player-active:#D7BAFB;
 }
 * {
   box-sizing: border-box;
@@ -58,6 +60,15 @@ h1 {
   flex: 1;
   border-bottom: 5px solid var(--border-bottom-of-header);
   padding-bottom: 8px;
+}
+.player-x.active { 
+    color: var(--x-player-active) ;
+    border-color: var(--x-player-active);
+}
+
+.player-o.active { 
+    color: var(--o-player-active) ;
+    border-color: var(--o-player-active);
 }
 
 .game {
