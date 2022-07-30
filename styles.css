@@ -39,8 +39,8 @@ h1 {
   font-weight: bold;
 }
 .restart {
-  width: 175px;
-  height: 50px;
+  width: 200px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,6 +50,7 @@ h1 {
   cursor: pointer;
   font-weight: bold;
   margin-top: 30px;
+  font-size: larger;
 }
 .restart:hover {
   background: var(--left-text);
@@ -135,6 +136,19 @@ h1 {
   }
 
   .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 50px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+
+  .restart {
+    font-size: smaller;
+    width: 150px;
+    height: 40px;
   }
 }
